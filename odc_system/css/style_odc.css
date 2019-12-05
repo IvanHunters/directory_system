@@ -1,0 +1,170 @@
+li,ul{
+	cursor:default;
+	color:#000;
+	list-style: none;
+	background-position: 5px center;
+	background-size: 15px;
+	background-repeat: no-repeat;
+}
+li {padding:4px 4px 4px 28px;}
+li:hover {
+	background-color:#E5F3FB;
+	}
+.file{
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAASCAMAAACzQHQ9AAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAvb29/Pv7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWfj/OAAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAAAsSURBVChTY/iPChj+M8IBlM8EBWABZD4TUABFHqgCiQ8EQ4KPDIB8ZPD/PwBJh0UZ8Dg8SAAAAABJRU5ErkJggg==');}
+.folder{
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAASCAMAAABcgh8DAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMAUExURQAAAEil01y53cOmQsGmSsSoRMSpSMasTcqvQ8ivU8qwRMyyRsyzTM60ScmyWtC3Tde4TdK6UdS4VdS9Vda+W9e/XNa/Xda/X9i6Udm8Vdq/W8WwZMu2YM25Z868bdC+c97BTd3BT9fAWdbAXNfAXd/DUdjAXdnBX9nDXtrEXtrCYdvDYtrEZtzCYtzFZN7GaN3IY9/Jat3JbtHAd9XGftvHcdvHctvJftzNeODFVeHHWuPKX+TNZeDLaODJb+HKbeHOa+LMbuLMb+HMdeDOduTNcePPfObQbOTRb+fUdOjTcurXeerVfOnYeOzbfNzRruXSgeTUgOfXjujVhuzXgO7Zg+zagu/bhu7ege3fh+vYiujbie7eifHdifHeiOvdpezhkvDghPLgifLjiPPlivTkjfXmjfXnjvDikPLll/Dnm/PpnvTqmezitezjuvTso/XspffvrPburvjtr/fxqvnysfn1sPv2sfn0tvr0t/v3tPv3u/r1vPz5v/TpwPbxxv36wuzs7Pz66P376f799P///P///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIpV928AAAEAdFJOU////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wBT9wclAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGHRFWHRTb2Z0d2FyZQBwYWludC5uZXQgNC4wLjVlhTJlAAAA40lEQVQoU2P4jwIY/henpybFxYaHhvhE1QG5aeXNOZEWNQ0NDRXBIG5VVWurrUlRbXWlK4Rb1WZgHFBZWugE5bZqyrsVFmTbA7kpVVVlLUpyztmZGYZAbnJVWUmTsKxdRkyYYzzD/8Sykvx6QRn9MG8vdz2G/xEl+VkJ/Hy6Xu42jdoM//2AvGheTikba6tGLYb/vkBeIDe7pJWlaqM6w39PIM+Fi01CVUGBSY3hvweQZ8TBKqCgoMAoyvDfAcjT4WAGcRXNGP4HaSiLiXOwCKmIipjmgvybZ84j7Q/zLxL4/x8Aqexx1odH0IwAAAAASUVORK5CYII=');
+}
+.folder + ul{
+	display:none;
+	}
+.folder.opened + ul{
+	display:block;
+	padding: 0px;
+	margin: 0px 10px;
+	padding-left: 10px;
+	}
+html,body{padding:0px;margin: 0px;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;}
+#editor{
+	position: absolute;
+	top: 26px;
+	left: 0px;
+	width: calc(100% - 0px);
+	height: calc(100% - 26px);
+	overflow:auto;
+	margin: 0px;transition: all 0.1s linear;
+}
+#explorer{
+	position: fixed;
+	top: 26px;
+	right: -200px;
+	width: 200px;
+	height: calc(100% - 26px);
+	overflow:auto;
+	background-color:#E4E4E4;transition: all 0.1s linear;
+}
+
+.explorer #editor{
+	width: calc(100% - 200px);
+}
+.explorer #explorer{
+	right: 0px;
+	border-left:1px solid #ccc;
+}
+
+#statusbar a{text-decoration:none;color:#222}
+#statusbar{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 25px;
+	line-height: 24px;
+	padding:0px;
+	border-bottom:1px solid #AAAAAB;
+	xborder-top:1px solid #F1F1F1;
+	background-color:#E4E4E4;
+	overflow-y:auto;
+}
+#statusbar .button{
+  position: relative;
+  display: inline-block;
+  right: 0px;
+  top: 0px;
+  padding: 0px 10px;
+  text-align: center;
+  line-height: 24px;
+  height: 24px;
+  cursor: pointer;
+  border: 0px;
+  outline: 0px;
+  margin: 0px;
+  border-right: 1px solid #AAAAAB;
+  border-left: 1px solid #F1F1F1;
+  box-sizing: content-box;
+  font: inherit;
+  background-color:#E4E4E4;
+  transition: all 0.1s linear;
+}/**
+#statusbar .button_list{
+	position: relative;
+	display: inline-block;
+	right: 0px;
+	top: 0px;
+	padding:0px 10px;
+	text-align: center;
+	line-height: 24px;
+	height: 24px;
+	cursor:pointer;
+	border-right:1px solid #ccc;
+}
+#statusbar .button_list + .list{
+	position: relative;
+	display: block;
+	right: 0px;
+	top: 0px;
+	padding:0px 10px;
+	text-align: center;
+	line-height: 24px;
+	height: 24px;
+	cursor:pointer;
+	border-right:1px solid #ccc;
+}**/
+#statusbar .button:hover{background-color: rgba(0,0,0,0.06);}
+#statusbar .button:active{background-color: rgba(0,0,0,0.2);}
+
+@media screen and (max-width: 750px) {
+    .explorer #editor{
+	width: calc(100% - 100px);
+}
+    #explorer{
+	position: fixed;
+	top: 26px;
+	right: -200px;
+	width: 100px;
+	height: calc(100% - 26px);
+	overflow:auto;
+	background-color:#E4E4E4;transition: all 0.1s linear;
+}
+
+    #statusbar .button{
+  position: relative;
+  display: inline-block;
+  right: 0px;
+  top: 0px;
+  padding: 0px 2px;
+  text-align: center;
+  line-height: 24px;
+  height: 24px;
+  cursor: pointer;
+  border: 0px;
+  outline: 0px;
+  margin: 0px;
+  border-right: 1px solid #AAAAAB;
+  border-left: 1px solid #F1F1F1;
+  box-sizing: content-box;
+  font: inherit;
+  background-color:#E4E4E4;
+  transition: all 0.1s linear;
+}
+
+	#xstatusbar{
+	  position: fixed;
+	  width: 50px;
+	  height: 100%;
+	  z-index: 4;
+	}
+	#xstatusbar .button{
+		display:block;
+	}
+}
+
+
+
+
+#statusbar,#explorer {
+-ms-user-select: none;
+-moz-user-select: none;
+-khtml-user-select: none;
+-webkit-user-select: none;
+}
