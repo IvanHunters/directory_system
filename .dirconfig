@@ -1,31 +1,12 @@
 [IGNORE_DIR]
-hdd/contents/
-FrameBots/.git/
-phpmyadmin/
-.odc_system/
-vendor/
-vidos/
-vidos_test/
-test/
-hdd/Zona/
-hdd/backup/
-hdd/stream/
-hdd/swap/
-hdd/volsu/
-hdd/volsu_old/
-hdd/System Volume Information/
 
 [HIDE_EXTENTIONS]
 .mp3
 .mp4
-.html
 %empty%
-.log
 
 [CONFIGURATE]
 max_file_view_in_folder=999
 
 [CLEAN_EXTENTIONS]
-.ts
-.sql
 .save
