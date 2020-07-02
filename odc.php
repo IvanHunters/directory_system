@@ -29,7 +29,14 @@ require_once "odc_system/kernel/body_odc.php";
 </select><div class="button" onclick='editor.execCommand("showSettingsMenu");'>Settings</div><div class="button" onclick='editor.execCommand("showKeyboardShortcuts");'>Help</div><div class="button" onclick='toggle_class(document.body,"explorer");editor.resize();'>Explorer</div><span id="files_list" style="display:none;height:100%;box-shadow: 1px 0px 0px 0px #F1F1F1;"></span><span id="text_state" class="button" style="float:right;box-shadow: -1px 0px 0px 0px #AAAAAB;"> </span>
 </div><div id="explorer">
 <?php
-	echo(array2ul(kdirlist($dir),$dir,false));
+    $a1 = microtime(true);
+    $dir_list = kdirlist($dir);
+    $a2 = microtime(true);
+    echo"Индексация: ".round($a2 - $a1, 3);
+    // usort($cpd);
+    // var_dump($cpd);
+    
+	echo(array2ul($dir_list, $dir, false));
 ?>
 </div>
 </body>
